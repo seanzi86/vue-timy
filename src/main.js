@@ -1,8 +1,18 @@
-import Vue from "vue";
-import App from "./App.vue";
+import formatConfig from "./formatConfig";
+import timy from "./timy.vue";
 
-Vue.config.productionTip = false;
+var timyConfig = {};
 
-new Vue({
-  render: h => h(App)
-}).$mount("#app");
+export default {
+  install(Vue, options) {
+    timyConfig = { ...formatConfig, ...options };
+    Vue.component(timy.name, timy);
+  }
+};
+
+export { timyConfig };
+
+// Use automatically when global Vue instance detected
+if (typeof window !== "undefined" && window.Vue) {
+  window.Vue.use(timy);
+}

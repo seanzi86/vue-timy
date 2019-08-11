@@ -1,44 +1,37 @@
 {
-  "name": "timy",
-  "version": "0.1.0",
-  "private": true,
+  "name": "vue-timy",
+  "version": "1.0.0",
+  "description": "A simple time ago Vue component.",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "plugin",
+    "time",
+    "date",
+    "ago"
+  ],
+  "homepage": "https://github.com/seanzi86/vue-timy",
+  "author": "Sean Carrington <seanzi@msn.com>",
+  "main": "./dist/vue-timy.common.js",
+  "files": [
+    "dist/*.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seanzi86/vue-timy"
+  },
+  "private": false,
+  "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build": "vue-cli-service build --target lib --name vue-timy ./src/main.js"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
     "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
-    "@vue/eslint-config-prettier": "^4.0.1",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
     "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
   },
   "browserslist": [
     "> 1%",
