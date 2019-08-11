@@ -46,3 +46,23 @@ var options = {
 // Use vue-timy with custom formats
 Vue.use(timy, options);
 ```
+
+### 3 Reference in your component templates
+
+```html
+<template>
+  <timy :date="theDate" />
+</template>
+```
+
+```javascript
+<script>
+export default {
+  data() {
+    return {
+      theDate: new Date()
+    };
+  }
+};
+</script>
+```
